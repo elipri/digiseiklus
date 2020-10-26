@@ -91,6 +91,11 @@ i.fas:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* color: lightblue; */
+}
+
+.backanim {
+    animation: changecol 20s infinite;
 }
 
 .sidewrap {
@@ -205,4 +210,12 @@ form input[type="submit"]:hover {
   h1 {
     font-size: 38pt;
   }
+}
+
+@keyframes changecol {
+    0% {background-color: rgb(37, 3, 90);}
+    25% {background-color: rgb(190, 6, 61);}
+    50% {background-color: purple;}
+    75% {background-color: rgb(4, 183, 196);}
+    100% {background-color: rgb(37, 3, 90);}
 }

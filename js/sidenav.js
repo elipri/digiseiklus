@@ -45,6 +45,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     console.log("klikkis");
     closeNav();
   });
+
+  //Click on color icon
+  var color = document.getElementById("color");
+  color.addEventListener("click", () => {
+    console.log("klikkis");
+    document.getElementsByClassName("wrap")[0].classList.toggle("backanim");
+  });
   
 
   function openNav() {
