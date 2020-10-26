@@ -61,7 +61,7 @@ i.fas {
 }
 
 i.fas:hover {
-    text-shadow: 0 0 1em lightblue;
+    /* text-shadow: 0 0 1em lightblue; */
 }
 
 .opaque {
@@ -112,7 +112,7 @@ h1 {
 }
 
 h1:hover {
-    text-shadow: 0 0 3em lightblue;
+    /* text-shadow: 0 0 3em lightblue; */
 }
 
 h2 {
