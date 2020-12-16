@@ -26,15 +26,19 @@ body {
   background-attachment: fixed;
 }
 
-
 /* Navigation */
 
 nav {
   text-align: right;
+  /* display: flex; */
   width: 90%;
   height: 20%;
   margin: 2em auto;
 }
+
+/* nav:first-child {
+  align-self: self-start;
+} */
 
 .sidenav {
   height: 100%;
@@ -81,9 +85,8 @@ i.fas {
 }
 
 .hide {
-    display: none;
+  display: none;
 }
-
 
 /* Containers */
 
@@ -99,7 +102,7 @@ i.fas {
 }
 
 .backanim {
-    animation: changecol 20s infinite;
+  animation: changecol 20s infinite;
 }
 
 .sidewrap {
@@ -107,16 +110,17 @@ i.fas {
   margin: auto;
 }
 
-
 /* Elements */
 
-i.fas:hover,h1,h2 {
-  color: #681D81;
+i.fas:hover,
+h1,
+h2 {
+  color: #681d81;
 }
 
 h1 {
   margin: 0;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
   justify-self: center;
   text-transform: uppercase;
   font-size: 71.8pt;
@@ -124,7 +128,7 @@ h1 {
 }
 
 h1:hover {
-    /* text-shadow: 0 0 3em lightblue; */
+  /* text-shadow: 0 0 3em lightblue; */
 }
 
 h2 {
@@ -134,9 +138,7 @@ h2 {
 }
 
 p {
-
 }
-
 
 /* Forms */
 
@@ -191,19 +193,80 @@ form input[type="submit"] {
   color: white;
   text-transform: uppercase;
   /* background-color: #808080; */
-  background: rgb(55,5,72);
-  background: linear-gradient(0deg, rgba(55,5,72,1) 25%, rgba(106,24,133,1) 66%, rgba(155,43,192,1) 100%);
+  background: rgb(55, 5, 72);
+  background: linear-gradient(
+    0deg,
+    rgba(55, 5, 72, 1) 25%,
+    rgba(106, 24, 133, 1) 66%,
+    rgba(155, 43, 192, 1) 100%
+  );
   width: 14em;
   height: 2.8em;
   margin-top: 0.5em;
 }
 
-input#create {
-  background: #681D81;
+button {
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  /* background-color: #808080; */
+  background: rgb(55, 5, 72);
+  background: linear-gradient(
+    0deg,
+    rgba(55, 5, 72, 1) 25%,
+    rgba(106, 24, 133, 1) 66%,
+    rgba(155, 43, 192, 1) 100%
+  );
+  width: 14em;
+  height: 2.8em;
+  margin: 1em;
+  font-family: "moonhouseregular";
 }
 
-#user > form input[type="submit"], #user > form input[type="text"] {
-    width: 100%;
+button.teach {
+  /* background: rgb(20, 108, 107);
+  background: linear-gradient(
+    0deg,
+    rgba(20, 108, 107, 1) 24%,
+    rgba(38, 222, 220, 1) 66%,
+    rgba(44, 251, 249, 1) 100%
+  ); */
+  background: rgb(28, 152, 150);
+  background: linear-gradient(
+    0deg,
+    rgba(28, 152, 150, 1) 24%,
+    rgba(38, 222, 220, 1) 66%,
+    rgba(44, 251, 249, 1) 100%
+  );
+}
+
+button:hover {
+  box-shadow: 0px 0px 1em #ccc;
+}
+
+input#create {
+  background: none;
+  color: #808080;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+input#create:hover {
+  box-shadow: none;
+}
+
+#user {
+  background: #ecd7f1;
+  border-radius: 25px;
+  padding: 3em;
+}
+
+#user > form input[type="submit"],
+#user > form input[type="text"] {
+  width: 100%;
 }
 
 form input[type="submit"]:hover {
@@ -214,7 +277,7 @@ form input[type="submit"]:hover {
 
 .questions {
   width: 45em;
-  background: #E4FBFB;
+  background: #e4fbfb;
   padding: 2em;
   margin-bottom: 2em;
   border: 0.1em solid #555;
@@ -230,46 +293,46 @@ form input[type="submit"]:hover {
 }
 
 .square.s1 {
-  background-color: #29E2E0;
+  background-color: #29e2e0;
   height: 65%;
 }
 
 .square.s2 {
-  background-color: #4F1661;
+  background-color: #4f1661;
 }
 
 .square.s3 {
-  background-color: #F34213;
+  background-color: #f34213;
   height: 45%;
 }
 
 .results {
   width: 45em;
-  color: #A09B9B;
+  color: #a09b9b;
   margin-top: 2em;
 }
 
-.results>p {
+.results > p {
   display: inline-block;
   text-align: right;
 }
 
-.results>hr {
+.results > hr {
   display: inline-block;
-  width: 78.7%;
-  margin-top:0;
+  width: 68%;
+  margin-top: 0;
   margin-bottom: -0.1em;
   border: 0;
-  border-top: 1px solid #A09B9B;
+  border-top: 1px solid #a09b9b;
 }
 
-.results>p:first-of-type {
+.results > p:first-of-type {
   text-align: left;
-  width: 10%;
+  width: 15%;
 }
-.results>p:last-of-type {
+.results > p:last-of-type {
   text-align: right;
-  width: 10%;
+  width: 15%;
 }
 
 /* Media queries */
@@ -287,9 +350,19 @@ form input[type="submit"]:hover {
 }
 
 @keyframes changecol {
-    0% {background-color: rgb(37, 3, 90);}
-    25% {background-color: rgb(190, 6, 61);}
-    50% {background-color: purple;}
-    75% {background-color: rgb(4, 183, 196);}
-    100% {background-color: rgb(37, 3, 90);}
+  0% {
+    background-color: rgb(37, 3, 90);
+  }
+  25% {
+    background-color: rgb(190, 6, 61);
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: rgb(4, 183, 196);
+  }
+  100% {
+    background-color: rgb(37, 3, 90);
+  }
 }

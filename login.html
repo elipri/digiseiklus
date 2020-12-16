@@ -10,7 +10,8 @@
     <script src="js/sidenav.js"></script>
     <title>Digiseiklus</title>
   </head>
-  <body>                       
+  <body>     
+    <?php echo 'jeööp'?>                   
     <div id="sidenav" class="sidenav">
         <div class="sidewrap">
             <a href="#" id="close" class="closebtn"><i class="fas fa-times-circle"></i></a>
@@ -39,11 +40,22 @@
             <a href="#" id="u"><i class="fas fa-user-circle"></i></a> -->
             <a href="#" id="h"><i class="fas fa-question-circle"></i></a>
         </nav>
-      <h1>Digiseiklus</h1>
+      <!-- <h1>Digiseiklus</h1>
         <div>
-          <a href="login.html"><button class="teach">Õpetaja</button></a>
-          <a href=""><button>Õpilane</button></a>
-        </div>
+          <button class="teach">Õpetaja</button>
+          <button>Õpilane</button>
+        </div> -->
+        <div id="user">
+            <h2>Õpetajale</h2>
+            <form action="" method="get">
+                <label for="uname">Kasutajanimi:</label><br />
+                <input type="text" id="uname" name="uname" /><br />
+                <label for="code">Salasõna:</label><br />
+                <input type="text" id="pword" name="cpword" /><br />
+                <input type="submit" id="create" value="Loo kasutaja" class="create" />
+                <input type="submit" value="Sisene" />
+              </form> 
+        </div> 
         
       </div>
     </div>
