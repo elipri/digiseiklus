@@ -26,6 +26,56 @@ body {
   background-attachment: fixed;
 }
 
+/* Background */
+
+#scene {
+  margin: -5em -5em;
+  position: fixed;
+  overflow: hidden;
+} 
+
+#scene img {
+  object-fit: cover !important;
+  height: auto;
+  width: 1240px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: plum;
+  border-radius: 50%;
+  filter: blur(5px);
+  display: inline-block;
+  animation: blink 3s ease-in infinite;
+  overflow: hidden;
+}
+
+.dot1 {
+  transform: translate(185px,440px);
+}
+
+.dot2 {
+  /* margin:515px 225px; */
+  transform: translate(230px,515px);
+  animation-delay: -50s;
+}
+
+.dot3 {
+  transform: translate(385px,515px);
+  animation-delay: -7s;
+}
+
+.dot4 {
+  transform: translate(360px,535px);
+  animation-delay: -15s;
+}
+
+.dot5 {
+  transform: translate(225px,515px);
+  animation-delay: -5s;
+}
+
 /* Navigation */
 
 nav {
@@ -205,52 +255,6 @@ form input[type="submit"] {
   margin-top: 0.5em;
 }
 
-button {
-  -webkit-border-radius: 0.3em;
-  -moz-border-radius: 0.3em;
-  border-radius: 0.3em;
-  border: none;
-  color: white;
-  text-transform: uppercase;
-  /* background-color: #808080; */
-  background: rgb(55, 5, 72);
-  background: linear-gradient(
-    0deg,
-    rgba(55, 5, 72, 1) 25%,
-    rgba(106, 24, 133, 1) 66%,
-    rgba(155, 43, 192, 1) 100%
-  );
-  width: 14em;
-  height: 2.8em;
-  margin: 1em;
-  font-family: "moonhouseregular";
-}
-
-#scene {
-  margin: -5em -5em;
-} 
-
-button.student {
-  /* background: rgb(20, 108, 107);
-  background: linear-gradient(
-    0deg,
-    rgba(20, 108, 107, 1) 24%,
-    rgba(38, 222, 220, 1) 66%,
-    rgba(44, 251, 249, 1) 100%
-  ); */
-  background: rgb(28, 152, 150);
-  background: linear-gradient(
-    0deg,
-    rgba(28, 152, 150, 1) 24%,
-    rgba(38, 222, 220, 1) 66%,
-    rgba(44, 251, 249, 1) 100%
-  );
-}
-
-button:hover {
-  box-shadow: 0px 0px 1em #ccc;
-}
-
 input#create {
   background: none;
   color: #808080;
@@ -277,6 +281,63 @@ form input[type="submit"]:hover {
   box-shadow: 0px 0px 1em #ccc;
 }
 
+/* Buttons */
+
+button {
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  /* background-color: #808080; */
+  background: rgb(55, 5, 72);
+  background: linear-gradient(
+    0deg,
+    rgba(55, 5, 72, 1) 25%,
+    rgba(106, 24, 133, 1) 66%,
+    rgba(155, 43, 192, 1) 100%
+  );
+  width: 14em;
+  height: 2.8em;
+  margin: 1em;
+  font-family: "moonhouseregular";
+}
+
+
+
+button.student {
+  /* background: rgb(20, 108, 107);
+  background: linear-gradient(
+    0deg,
+    rgba(20, 108, 107, 1) 24%,
+    rgba(38, 222, 220, 1) 66%,
+    rgba(44, 251, 249, 1) 100%
+  ); */
+  background: rgb(28, 152, 150);
+  background: linear-gradient(
+    0deg,
+    rgba(28, 152, 150, 1) 24%,
+    rgba(38, 222, 220, 1) 66%,
+    rgba(44, 251, 249, 1) 100%
+  );
+}
+
+button:hover {
+  box-shadow: 0px 0px 1em #ccc;
+}
+
+.chippy {
+  height: 15px;
+  width: 15px;
+  background-color:red;
+  border-radius: 50%;
+}
+
+button.student:hover {
+  animation: chippy;
+}
+
 /* Questions */
 
 .questions {
@@ -288,6 +349,10 @@ form input[type="submit"]:hover {
 }
 
 /* Results */
+
+.resultlist {
+  padding-bottom: 3em;
+}
 
 .square {
   display: inline-block;
@@ -368,5 +433,22 @@ form input[type="submit"]:hover {
   }
   100% {
     background-color: rgb(37, 3, 90);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: .6;
+  }
+
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
