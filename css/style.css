@@ -226,7 +226,11 @@ button {
   font-family: "moonhouseregular";
 }
 
-button.teach {
+#scene {
+  margin: -5em -5em;
+} 
+
+button.student {
   /* background: rgb(20, 108, 107);
   background: linear-gradient(
     0deg,

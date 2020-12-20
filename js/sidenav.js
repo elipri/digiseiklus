@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   //console.log("doc loaded");
 
+  //Parallax.js
+  var scene = document.getElementById('scene');
+  var parallaxInstance = new Parallax(scene);
+
   //Create opaque cover for content under sidenav
   var div = document.createElement("div");
   div.setAttribute("class", "opaque");
