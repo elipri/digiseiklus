@@ -47,10 +47,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   var d = document.getElementById("d");
   if(d) {
     d.addEventListener("click", ()=> {
-      console.log('clikes on download');
+      //console.log('clicks on download');
       const doc = new jsPDF();
       const source = window.document.getElementsByClassName("resultlist")[0];
-      //doc.text(20,20,'Hello world!');
       doc.fromHTML(source);
       // Save the PDF
       doc.save('pdf/test.pdf');
@@ -65,11 +64,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   //Click on color icon
-  var color = document.getElementById("color");
+  /* var color = document.getElementById("color");
   color.addEventListener("click", () => {
     console.log("klikkis");
     document.getElementsByClassName("wrap")[0].classList.toggle("backanim");
-  });
+  }); */
+
+  //Write scores to podium
+  var resultlist = document.getElementsByClassName("results");
+  if (resultlist.length > 0) {
+    for(var i = 0; i < 3; i++) {
+      var name = resultlist[i].getElementsByTagName('p')[0].innerHTML.toUpperCase();
+      if (i==0) {
+        var first = document.getElementById('first');
+        first.innerHTML = name;
+      } else if (i==1) {
+        var second = document.getElementById('second');
+        second.innerHTML = name;
+      } else if (i==2) {
+        var third = document.getElementById('third');
+        third.innerHTML = name;
+      }
+    }
+  }
   
 
   function openNav() {

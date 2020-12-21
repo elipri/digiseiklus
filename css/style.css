@@ -17,8 +17,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "corbel";
+  src: url("../fonts/CORBEL.TTF") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "corbel";
   color: #808080;
   height: 100%;
   /* background-image: url("../img/Taust.png");
@@ -361,11 +369,33 @@ button.student:hover {
   padding-bottom: 3em;
 }
 
+.squares {
+  display: flex;
+  align-items: flex-end;
+}
+
 .square {
-  display: inline-block;
   height: 10em;
   width: 15em;
-  background-color: #555;
+  display: flex;
+}
+
+.square span {
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
+  padding-bottom: 1em;
+  color: white;
+}
+
+.square i.fa {
+  color: yellow;
+  height: 50%;
+  padding-top: 1.5em;
+}
+
+.square.s1, .square.s2, .square.s3 {
+  align-items: center;
 }
 
 .square.s1 {
@@ -375,6 +405,12 @@ button.student:hover {
 
 .square.s2 {
   background-color: #4f1661;
+  flex-direction: column;
+}
+
+.firstplace {
+  display: flex;
+  height: 100%;
 }
 
 .square.s3 {
@@ -410,6 +446,8 @@ button.student:hover {
   text-align: right;
   width: 15%;
 }
+
+
 
 /* Media queries */
 
