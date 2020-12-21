@@ -92,8 +92,9 @@ nav {
   text-align: right;
   /* display: flex; */
   width: 90%;
-  height: 20%;
+  /* height: 20%; */
   margin: 2em auto;
+  margin-bottom: 10%;
 }
 
 /* nav:first-child {
@@ -157,7 +158,7 @@ i.fas, i.fa {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +183,8 @@ h2 {
 }
 
 h1 {
-  margin: 0;
+  /* margin: 0; */
+  margin-top: 10vh;
   margin-bottom: 0.5em;
   justify-self: center;
   text-transform: uppercase;
@@ -208,7 +210,7 @@ p {
 form {
   margin: 0;
   justify-self: center;
-  font-family: "moonhouseregular";
+  font-family: "corbel";
 }
 
 form textarea,
@@ -253,6 +255,7 @@ form input[type="submit"] {
   -moz-border-radius: 0.3em;
   border-radius: 0.3em;
   border: none;
+  font-family: "moonhouseregular";
   color: white;
   text-transform: uppercase;
   /* background-color: #808080; */
@@ -269,6 +272,7 @@ form input[type="submit"] {
 }
 
 input#create {
+  font-family: "corbal";
   background: none;
   color: #808080;
   text-decoration: underline;
@@ -285,6 +289,13 @@ input#create:hover {
   border-radius: 25px;
   box-shadow: 0px 0px 1em #ccc;
   padding: 3em;
+  padding-bottom: 5em;
+  margin-bottom: 5em;
+  max-width: 25em;
+}
+
+#user h2 {
+  text-align: center;
 }
 
 #user > form input[type="submit"],
@@ -400,7 +411,7 @@ button.student:hover {
 
 .square.s1 {
   background-color: #29e2e0;
-  height: 65%;
+  height: 6em;
 }
 
 .square.s2 {
@@ -415,7 +426,7 @@ button.student:hover {
 
 .square.s3 {
   background-color: #f34213;
-  height: 45%;
+  height: 4em;
 }
 
 .results {
