@@ -21,9 +21,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #808080;
   height: 100%;
-  background-image: url("../img/Taust.png");
+  /* background-image: url("../img/Taust.png");
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 /* Background */
@@ -52,7 +52,9 @@ body {
 }
 
 .dot1 {
-  transform: translate(185px,440px);
+  /* transform: translate(185px,440px); */
+  margin: 440px 185px;
+  animation-delay: -1s;
 }
 
 .dot2 {
@@ -92,6 +94,7 @@ nav {
 
 .sidenav {
   height: 100%;
+  /* visibility: hidden; */
   width: 0;
   position: fixed;
   z-index: 2;
@@ -99,12 +102,14 @@ nav {
   left: 0;
   background-color: #fff;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0s;
   padding-top: 60px;
 }
 
 .sidenavopen {
+  /* visibility: visible; */
   width: 30em;
+  transition: 0.3s;
 }
 
 .sidenav .closebtn {
@@ -113,7 +118,7 @@ nav {
   right: 2em;
 }
 
-i.fas {
+i.fas, i.fa {
   color: #808080;
   font-size: 2em;
 }
@@ -267,8 +272,10 @@ input#create:hover {
 }
 
 #user {
-  background: #ecd7f1;
+  /* background: #ecd7f1; */
+  background: white;
   border-radius: 25px;
+  box-shadow: 0px 0px 1em #ccc;
   padding: 3em;
 }
 
@@ -416,6 +423,22 @@ button.student:hover {
   h1 {
     font-size: 38pt;
   }
+}
+
+@media (min-width: 1240px) {
+  #scene img {
+    width: 1600px;
+  }
+  .dot, .dot1, .dot2, .dot3, .dot4 {
+    transform: translate(60px, 130px);
+  }
+}
+
+@media print { 
+  nav, img { 
+     visibility: hidden; 
+  } 
+  
 }
 
 @keyframes changecol {

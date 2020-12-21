@@ -43,6 +43,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  //Click on download icon
+  var d = document.getElementById("d");
+  if(d) {
+    d.addEventListener("click", ()=> {
+      console.log('clikes on download');
+      const doc = new jsPDF();
+      const source = window.document.getElementsByClassName("resultlist")[0];
+      //doc.text(20,20,'Hello world!');
+      doc.fromHTML(source);
+      // Save the PDF
+      doc.save('pdf/test.pdf');
+    });
+  }
+
   //Click on close icon
   var close = document.getElementById("close");
   close.addEventListener("click", () => {
