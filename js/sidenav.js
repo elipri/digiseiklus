@@ -89,10 +89,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
   
   //Check password length
-  
-
-
-
+  var pword = document.getElementById("pword");
+  pword.addEventListener('change', () => {
+  });
 
   //Open sidenav
   function openNav() {
