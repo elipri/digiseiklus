@@ -88,7 +88,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   }
   
+  //Check password length
+  
 
+
+
+
+  //Open sidenav
   function openNav() {
     document.getElementById("sidenav").classList.add("sidenavopen");
     document.body.appendChild(div);
@@ -99,6 +105,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
   }
 
+  //Close sidenav
   function closeNav() {
     document.getElementById("sidenav").classList.remove("sidenavopen");
     if (!!document.getElementsByClassName("opaque")[0]) {

@@ -24,9 +24,12 @@
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: "corbel";
+  /* font-family: "corbel"; */
+  font-family: 'Montserrat', sans-serif;
   color: #808080;
   height: 100%;
   /* background-image: url("../img/Taust.png");
@@ -210,7 +213,8 @@ p {
 form {
   margin: 0;
   justify-self: center;
-  font-family: "corbel";
+  /* font-family: "corbel"; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 form textarea,
@@ -230,7 +234,7 @@ form input[type="text"] {
   height: 2.8em;
   padding-left: 0.5em;
   margin-bottom: 0.5em;
-  background-color: #e6e6e6;
+  background-color: #fafafa;
 }
 
 form input[type="text"]:hover {
@@ -245,9 +249,14 @@ form input[type="text"]:focus {
   border: 0.1em solid #2d9fd9;
 }
 
-input[type="text"] {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #808080;
+input[type="text"], select {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  color: #808080!important;
+}
+
+input:focus {
+  color: #808080!important;
 }
 
 form input[type="submit"] {
@@ -271,12 +280,18 @@ form input[type="submit"] {
   margin-top: 0.5em;
 }
 
+form label {
+  font-weight: normal;
+  color: #a09b9b;
+}
+
 input#create {
-  font-family: "corbal";
+  /* font-family: "corbal"; */
+  font-family: 'Montserrat', sans-serif;
   background: none;
   color: #808080;
   text-decoration: underline;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 input#create:hover {
@@ -285,9 +300,9 @@ input#create:hover {
 
 #user {
   /* background: #ecd7f1; */
-  background: white;
+  background: rgb(234,215,239, .8);
   border-radius: 25px;
-  box-shadow: 0px 0px 1em #ccc;
+  box-shadow: 0px 0px 1em darkorchid;
   padding: 3em;
   padding-bottom: 5em;
   margin-bottom: 5em;
@@ -295,6 +310,12 @@ input#create:hover {
 }
 
 #user h2 {
+  text-align: center;
+}
+
+#user a {
+  color: darkorchid;
+  display: inherit;
   text-align: center;
 }
 
@@ -377,7 +398,10 @@ button.student:hover {
 /* Results */
 
 .resultlist {
-  padding-bottom: 3em;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+  background-color: rgb(255,255,255, .8);
 }
 
 .squares {
@@ -432,7 +456,7 @@ button.student:hover {
 .results {
   width: 45em;
   color: #a09b9b;
-  margin-top: 2em;
+  margin-top: .3em;
 }
 
 .results > p {
