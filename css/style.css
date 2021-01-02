@@ -329,6 +329,10 @@ form input[type="submit"]:hover {
   box-shadow: 0px 0px 1em #ccc;
 }
 
+.redborder {
+  border: 1px solid deeppink!important;
+}
+
 /* Buttons */
 
 button {
@@ -385,6 +389,7 @@ button:hover {
 button.student:hover {
   animation: chippy;
 }
+
 
 /* Questions */
 
