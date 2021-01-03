@@ -168,6 +168,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
   
 
+  //Chippy animation
+  let student = document.getElementById('student');
+  let chippy =  '<img src="img/Chippy.png" height="60px">' ;
+  if(student) {
+    tippy(student, {theme:'chippy', content:chippy, allowHTML: true});
+  }
+
   //Open sidenav
   function openNav() {
     document.getElementById("sidenav").classList.add("sidenavopen");
