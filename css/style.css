@@ -225,7 +225,7 @@ form input {
   -moz-box-sizing: border-box;
 }
 
-form input[type="text"], form input[type="password"] {
+form input[type="text"], form input[type="password"], #code {
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
   border-radius: 0.3em;
@@ -237,11 +237,11 @@ form input[type="text"], form input[type="password"] {
   background-color: #fafafa;
 }
 
-form input[type="text"]:hover, form input[type="password"]:hover {
+form input[type="text"]:hover, form input[type="password"]:hover, #code:hover {
   box-shadow: inset 0px 0px 1em #ccc;
 }
 
-form input[type="text"]:focus, form input[type="password"]:focus {
+form input[type="text"]:focus, form input[type="password"]:focus, #code:focus {
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
   border-radius: 0.3em;
@@ -408,6 +408,8 @@ button.student:hover {
 
 .tbuttons {
   margin-bottom: 5em;
+  display: flex;
+  align-items: center;
 }
 
 .tbuttons a:first-of-type button{
@@ -418,6 +420,10 @@ button.student:hover {
     rgba(38, 222, 220, 1) 66%,
     rgba(44, 251, 249, 1) 100%
   );
+}
+
+#code {
+  margin: 1em;
 }
 
 /* Results */

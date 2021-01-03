@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //Click on close icon
   let close = document.getElementById("close");
   close.addEventListener("click", () => {
-    console.log("klikkis");
     closeNav();
   });
 
@@ -97,38 +96,38 @@ document.addEventListener("DOMContentLoaded", (event) => {
     rsubmit.disabled = true;    
   }
   if(pword && pword2) {
-    let instance = tippy(pword);
-    let instance2 = tippy(pword2);
-    instance.setContent('Min 8 tähemärki!');
-    instance2.setContent('Salasõnad erinevad!');
-    instance.setProps({ hideOnClick: false });
-    instance2.setProps({ hideOnClick: false });
+    let tooltip = tippy(pword);
+    let tooltip2 = tippy(pword2);
+    tooltip.setContent('Min 8 tähemärki!');
+    tooltip2.setContent('Salasõnad erinevad!');
+    tooltip.setProps({ hideOnClick: false });
+    tooltip2.setProps({ hideOnClick: false });
     pword.addEventListener('change', ()=>{
-      instance.setProps({trigger:'click'});
+      tooltip.setProps({trigger:'click'});
       if (pword.value.length >= 8) {
         pword.classList.remove('redborder');
-        instance.disable();
+        tooltip.disable();
       } else if (pword.value.length < 8) {
         pword.classList.add('redborder');
-        instance.enable();
-        instance.show();
+        tooltip.enable();
+        tooltip.show();
       }
     });
     //Check if passwords match
-    pword2.addEventListener('change', ()=>{
-      instance2.setProps({trigger:'click'});
+    tooltip2.disable();
+    pword2.addEventListener('keyup', ()=>{
+      tooltip2.setProps({trigger:'click'});
       rsubmit.disabled = true;
       if (pword.value == pword2.value) {
         pword2.classList.remove('redborder');
-        instance2.disable();
-        if(pword2.value.length >= 8) {
-          console.log(pword2.value);
+        tooltip2.disable();
+        if (pword2.value.length >= 8) {
           rsubmit.disabled = false;
         }
       } else {
         pword2.classList.add('redborder');
-        instance2.enable();
-        instance2.show();
+        tooltip2.enable();
+        tooltip2.show();
       }
     });
   }
@@ -137,20 +136,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
 
   //Disable 'Tulemused' button, when code hasn't been created
-  let rbtn = document.getElementById("resultbtn");
-  let cbtn = document.getElementById("createbtn");
+  let rbtn = document.getElementById("resultbtn"); //'tulemused'
+  let cbtn = document.getElementById("createbtn"); //'loo kood'
   if(rbtn && cbtn) {
+    let tooltip = tippy (rbtn);
+    tooltip.setProps({trigger: 'click'});
+    tooltip.setContent('Loo kood!');
     rbtn.removeAttribute('href');
+    cbtn.removeAttribute('href');
     rbtn.addEventListener('click', ()=>{
       if(cbtn.innerHTML=='<button>Loo kood</button>') {
-        rbtn.innerHTML = 'Sa ei ole veel loonud koodi!';
+        //rbtn.innerHTML = 'Sa ei ole veel loonud koodi!';
+        
       }
     });
     cbtn.addEventListener('click', ()=>{
-      //Code should be generated here and written as cbtn inner HTML:
-      cbtn.innerHTML = 'KOOD: 12345';
+      //Code should be generated here and written as part of cbtn inner HTML:
+      let code = 12345;
+      cbtn.innerHTML = '<input type="text" value="'+code+'" id="code">';
+      let copyCode = document.getElementById('code');
+      let tooltip2 = tippy(cbtn);
+      copyCode.select();
+      copyCode.setSelectionRange(0,9999);
+      document.execCommand('copy');
+      tooltip2.setContent('Kood kopeeritud!');
+      tooltip2.show();
       rbtn.setAttribute('href', 'tulemused.html');
-      rbtn.innerHTML = '<button>Tulemused</button>';
+      tooltip.disable();
+      // rbtn.innerHTML = '<button>Tulemused</button>';
     });
   }
   
